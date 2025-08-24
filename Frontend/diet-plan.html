@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan | Food Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="diet-plan.css"> -->
+    
+    
+    
+    <!-- <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="diet-plan.css">
+     -->
+    
+
+    <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+     <link rel="stylesheet" href="diet-nav.css">
+    <link rel="stylesheet" href="diet-plan.css">
+        
+</head>
+<body>
+  
+    <header>
+        <a href="./home.html" class="logo"><i class="fa fa-utensils"></i>Foodies</a>
+        <nav class="navbar">
+            <a class="active" href="./home.html">Home</a>
+            <a href="./dishes.html">dishes</a>
+            <a href="#" onclick="openAbout()">about</a>
+            <a href="./contact.html" >Contact us</a>
+            <a href="./diet-plan.html">Diet Plan</a>
+           
+            <a class="feed" id="feedback">feedback</a>
+            <a href="./order.html">Orders</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="order.html" class="fas fa-shopping-cart"></a>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <a      class="fas fa-sign-in-alt logout-btn"></a>
+            
+        </div>  
+    </header>
+    
+    <section id="user-info-ribbon" style="display:none;">
+        <div class="user-info-ribbon">
+            <div class="user-info">
+                <img src="images/user-icon.png" alt="User Profile" class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name" id="user-name">John Doe</span>
+                    <span class="user-email" id="user-email">john.doe@example.com</span>
+                </div>
+            </div>
+            <div class="user-actions" style=" transition: 2s;">
+                <button class="profile-btn" id="profile-btn">View Profile</button>
+                <button class="profile-btn" id="view-orders-btn">View Your Orders</button>
+                <button class="logout-btn"  >Logout</button>
+            </div>
+        </div>
+        
+    </section>
+     
+    <section id="diet-plan" class="diet-section">
+        <div class="container">
+            <h2>Our Diet Plans</h2>
+            <p>Choose the plan that suits your goals. We provide personalized options to meet your fitness needs.</p>
+            <div class="grid">
+                <!-- Gaining Diet Plan -->
+                <!-- <div class="box">
+                    <h3>Gaining Diet Plan</h3>
+                    <p>High-calorie meals to increase muscle mass in a healthy way.</p>
+                    <ul>
+                        <li>High Protein</li>
+                        <li>Calorie Dense</li>
+                        <li>Healthy Fats</li>
+                    </ul>
+                    <button class="btn" onclick="suggestRestaurants('gaining')">View Restaurants</button>
+                </div> -->
+
+                <!-- Weight Loss Diet Plan -->
+                <!-- <div class="box">
+                    <h3>Weight Loss Diet Plan</h3>
+                    <p>Low-calorie meals to help you lose weight while staying full longer.</p>
+                    <ul>
+                        <li>Low Calorie</li>
+                        <li>High in Fiber</li>
+                        <li>Balanced Macronutrients</li>
+                    </ul>
+                    <button class="btn" onclick="suggestRestaurants('weight_loss')">View Restaurants</button>
+                </div> -->
+
+                <!-- Maintaining Diet Plan -->
+                <!-- <div class="box">
+                    <h3>Maintaining Diet Plan</h3>
+                    <p>Balanced meals to maintain your current weight and stay healthy.</p>
+                    <ul>
+                        <li>Balanced Meals</li>
+                        <li>Moderate Calories</li>
+                        <li>All-in-one Nutrition</li>
+                    </ul>
+                    <button class="btn" onclick="suggestRestaurants('maintaining')">View Restaurants</button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Foodie Delivery. All rights reserved.</p>
+    </footer>
+
+    <script>
+ 
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+        
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+        window.onscroll=() => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+        document.querySelector('#search-icon').onclick=() => {
+            document.querySelector('#search-form').classList.toggle('active');
+        }
+        // document.querySelector('#close1').onclick=() => {
+        //     document.querySelector('#search-form').classList.toggle('active');
+        // }
+        document.querySelector("#feedback").onclick=() =>{
+        document.querySelector("#co1").classList.toggle("active");
+    }
+    //     document.querySelector("#close").onclick=() =>{
+    //     document.querySelector("#co1").classList.toggle("active");
+    // }
+    var preloader = document.getElementById("loading");
+    function myload() {
+        preloader.style.display="none";
+    }
+
+
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+    
+    //     btn.onclick = () =>{
+    //     widget.style.display = "none";
+    //     post.style.display = "block";
+    //     editBtn.onclick = () =>{
+    //         widget.style.display = "block";
+    //         post.style.display = "none";
+    //     }
+    //     return false;
+    // }
+    function openAbout(){
+        document.getElementById("about").style.width = "100%";
+
+    }
+    function closeNav(){
+        document.getElementById("about").style.width = "0%";
+    }
+    var preloader = document.getElementById("loader");
+    
+    function myloader(){
+        preloader.style.display = "none";
+    }
+    function mygrocery(){
+        confirm("Order Now on Whatsapp click ok to continue");
+    }
+    
+    </script>
+    
+
+    <script src="diet-plan.js"></script>
+</body>
+</html>

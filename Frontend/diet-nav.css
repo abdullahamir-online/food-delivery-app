@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --green: #32cd32;
+    --black: #000;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --orange: #ff5722;
+    --dark-orange: #e64a19;
+    --light-bg: #f8f8f8;
+    --dark-bg: #333;
+    --gradient: linear-gradient(to right, #ff5722, #ff9800);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .logo i {
+    color: var(--orange);
+}
+
+header .navbar a {
+    font-size: 1.8rem;
+    padding: .8rem 2rem;
+    border-radius: .5rem;
+    color: var(--light-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--gradient);
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+    transition: background 0.3s, transform 0.3s;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: #fff;
+    background: var(--gradient);
+    transform: rotate(360deg);
+}
+
+#search-form {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    transition: top 0.5s ease-in-out;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder {
+    color: #ddd;
+}
+
+#search-form label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+}
+
+#search-form label:hover {
+    color: var(--orange);
+}
+
+

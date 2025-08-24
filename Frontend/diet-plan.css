@@ -1,0 +1,203 @@
+/* General Reset and Variables */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --green: #32cd32;
+    --black: #000;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --orange: #ff5722;
+    --dark-orange: #e64a19;
+    --light-bg: #f8f8f8;
+    --dark-bg: #333;
+    --gradient: linear-gradient(to right, #ff5722, #ff9800);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 62.5%;
+    overflow: auto;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    font-size: large;
+    padding: 1rem;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* Push the footer to the bottom */
+    transition: background-color var(--transition-time) ease-in-out;
+}
+
+footer:hover {
+    background: #444;
+}
+
+/* Diet Section */
+section.diet-section {
+    margin-top: 8rem;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow var(--transition-time) ease-in-out;
+}
+
+section.diet-section h2 {
+    color: var(--orange);
+    font-size: 3.2rem; /* Larger heading */
+    font-weight: 700;
+    transition: color var(--transition-time) ease-in-out;
+}
+
+section.diet-section p {
+    margin: 1rem 0;
+    color: var(--light-color);
+    font-size: 1.6rem; /* Slightly larger */
+    font-weight: 500;
+    transition: color var(--transition-time) ease-in-out;
+}
+
+/* Grid Layout */
+section.diet-section .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Increased minimum size */
+    gap: 3rem; /* Increased spacing between boxes */
+    margin-top: 3rem;
+}
+
+/* Boxes */
+section.diet-section .box {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    /* width: calc(50% - 1rem); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+section.diet-section .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: var(--gradient);
+    color: white;*/
+}
+
+/* Box Headings */
+/* Box Headings */
+section.diet-section .box h3 {
+    font-size: 2.2rem;
+    color: black;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added smooth transitions */
+}
+
+/* Hover effect for Box Headings */
+section.diet-section .box:hover h3 {
+    color: white; /* Change color to white on hover */
+    transform: scale(1.1); /* Slightly enlarge the heading on hover */
+}
+
+
+/* Box Paragraphs */
+section.diet-section .box p {
+    font-size: 1.8rem; /* Larger font size for paragraphs */
+    color: black;
+    margin-bottom: 2rem;
+}
+
+/* Buttons in Boxes */
+section.diet-section .btn {
+    background: var(--gradient);
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+/* List inside the boxes */
+section.diet-section .box ul {
+    margin: 1rem 0;
+    list-style: none;
+    padding: 0; /* Removes default padding for a cleaner look */
+}
+
+/* List Items Default Styling */
+section.diet-section .box ul li {
+    margin: 1rem 0; /* Spacing between list items */
+    color: black; /* Default color */
+    font-size: 1.8rem; /* Text size */
+    font-weight: 500; /* Font weight for readability */
+    line-height: 1.6; /* Line height for better spacing */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect for List Items */
+section.diet-section .box:hover ul li {
+    color: white; /* Change color to white on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+section.diet-section .btn:hover {
+    background: white;
+    color: var(--orange);
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .navbar a {
+        font-size: 1.4rem;
+    }
+
+    section.diet-section h2 {
+        font-size: 2.8rem; /* Smaller for mobile */
+    }
+
+    section.diet-section p {
+        font-size: 1.4rem;
+    }
+
+    section.diet-section .box {
+        padding: 3rem; /* Adjusted padding for smaller screens */
+    }
+
+    section.diet-section .box h3 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    section.diet-section .box p {
+        font-size: 1.6rem; /* Adjusted paragraph size */
+    }
+}

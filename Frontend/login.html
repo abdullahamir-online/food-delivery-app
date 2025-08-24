@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login/Register</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+        <link rel="stylesheet" href="alert.css">
+    </head>
+<body>
+    
+  <div class="container">
+      <div class="loginbg">
+          <div class="box signin">
+              <h2>Already Have an Account ?</h2>
+              <button class="signinbtn">Sign in</button>
+          </div>
+          <div class="box signup">
+            <h2>Dont Have an Account ?</h2>
+            <button class="signupbtn">Sign up</button>
+          </div>
+      </div>
+      <div class="formbx">
+        <div class="form signinform">
+            <form id="loginForm">
+                <h2>Foodies</h2>
+                <h3>Sign In</h3>
+                <input type="text" placeholder="Username" id="username" required>
+                <input type="password" placeholder="Password" id="password.login" required>
+                
+                
+                <input type="submit" value="Sign In" id="login">
+                </a>
+                <a href="#" class="forgot">Forgot password?</a>
+            </form>
+        </div>
+        <div class="form signupform">
+            <form id="signupForm">
+                <h3>Sign up</h3>
+                <input type="text" placeholder="Enter Your First Name" id="first_name"  required>
+                <input type="text" placeholder="Enter Your Last Name" id="last_name" required>
+                <input type="text" placeholder="Email" id="email" required>
+                <input type="text" placeholder="Phone" id="phone" required>
+                <input type="date" placeholder=" Enter your Date of birth" id="dob" required>
+                <input type="password" placeholder="Password" id="password.singnUp" required>
+                <input type="password" placeholder="Confirm password"  id="confirm_password.singnUp" required>
+                <input type="submit" value="Sign Up" id="signup">
+            </form>
+        </div>
+      </div>
+      </div>
+
+
+
+      <div id="alert-box" class="hidden">
+        <div class="alert-content">
+            <span id="alert-message">Default Alert Message</span>
+            <button id="close-alert">OK</button>
+        </div>
+    </div>
+    
+
+
+<script>
+    const signinbtn = document.querySelector('.signinbtn');
+    const signupbtn = document.querySelector('.signupbtn');
+    const formbx = document.querySelector('.formbx'); 
+    const body = document.querySelector('body')
+
+    signupbtn.onclick = function(){
+        formbx.classList.add('active')
+        body.classList.add('active')
+    }
+    signinbtn.onclick = function(){
+        formbx.classList.remove('active')
+        body.classList.remove('active')
+    }
+    
+    </script>
+    <!-- <script src="alert.js"></script> -->
+    <script src="login.js"></script>
+    <script src="singnUp.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script defer src="order.js"></script>
+</head>
+<body>
+    <header>
+        <a href="./home.html" class="logo"><i class="fa fa-utensils"></i>Foodies</a>
+        <nav class="navbar">
+            <a href="./home.html">Home</a>
+            <a class="active" href="./dishes.html">dishes</a>
+            <a href="#" onclick="openAbout()">about</a>
+            <a class="feed" id="feedback">feedback</a>
+            <a href="./contact.html" >Contact us</a>
+            <a href="./cart.html">Orders</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <a href="login.html" class="fas fa-sign-in-alt"></a>
+            
+        </div>
+    
+         <!--search form-->
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close1"></i>
+    </form>
+    <!--Search Form ends-->
+    </header>
+
+    <main>
+        <section class="menu-category">
+            <h2>Biryani</h2>
+            <div class="menu-container">
+                <div id="1" class="menu-item" data-id="1" data-price="349">
+                    <h3>Chicken Biryani</h3>
+                    <p>Fragrant basmati rice cooked with tender chicken and spices.</p>
+                    <p class="price">Rs 349</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="2" class="menu-item" data-id="2" data-price="299">
+                    <h3>Vegetable Biryani</h3>
+                    <p>Aromatic rice layered with fresh vegetables and saffron.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="3" class="menu-item" data-id="3" data-price="399">
+                    <h3>Beef Biryani</h3>
+                    <p>Succulent lamb pieces cooked with fragrant rice and spices.</p>
+                    <p class="price">Rs 399</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="4" class="menu-item" data-id="4" data-price="449">
+                    <h3>Fish Biryani</h3>
+                    <p>Fresh fish cooked in aromatic rice with a blend of spices.</p>
+                    <p class="price">Rs 449</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Pizza</h2>
+            <div class="menu-container">
+                <div id="5" class="menu-item" data-id="5" data-price="299">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Loaded with pepperoni, cheese, and a tangy tomato sauce.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="6" class="menu-item" data-id="6" data-price="249">
+                    <h3>Veggie Pizza</h3>
+                    <p>A healthy mix of fresh vegetables and melted cheese.</p>
+                    <p class="price">Rs 249</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="7" class="menu-item" data-id="7" data-price="299">
+                    <h3>Margherita Pizza</h3>
+                    <p>Classic pizza with fresh basil, mozzarella, and tomato sauce.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="8" class="menu-item" data-id="8" data-price="349">
+                    <h3>BBQ Chicken Pizza</h3>
+                    <p>BBQ chicken with tangy sauce, cheese, and vegetables.</p>
+                    <p class="price">Rs 349</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Rotis & Breads</h2>
+            <div class="menu-container">
+                <div id="9" class="menu-item" data-id="9" data-price="49">
+                    <h3>Butter Naan</h3>
+                    <p>Soft and fluffy naan brushed with melted butter.</p>
+                    <p class="price">Rs 49</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="10" class="menu-item" data-id="10" data-price="59">
+                    <h3>Garlic Naan</h3>
+                    <p>Warm naan topped with roasted garlic and fresh herbs.</p>
+                    <p class="price">Rs 59</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="11" class="menu-item" data-id="11" data-price="79">
+                    <h3>Cheese Naan</h3>
+                    <p>Cheese-filled naan, soft and melt-in-your-mouth.</p>
+                    <p class="price">Rs 79</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="12" class="menu-item" data-id="12" data-price="99">
+                    <h3>Stuffed Paratha</h3>
+                    <p>Layered flatbread stuffed with spiced vegetables.</p>
+                    <p class="price">Rs 99</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Desserts</h2>
+            <div class="menu-container">
+                <div id="13" class="menu-item" data-id="13" data-price="99">
+                    <h3>Gulab Jamun</h3>
+                    <p>Delicious milk dumplings soaked in sugar syrup.</p>
+                    <p class="price">Rs 99</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="14" class="menu-item" data-id="14" data-price="149">
+                    <h3>Ice Cream Sundae</h3>
+                    <p>Rich and creamy sundae topped with chocolate syrup.</p>
+                    <p class="price">Rs 149</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="15" class="menu-item" data-id="15" data-price="79">
+                    <h3>Rasgulla</h3>
+                    <p>Soft, spongy, and sweet, soaked in syrup.</p>
+                    <p class="price">Rs 79</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="16" class="menu-item" data-id="16" data-price="199">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Warm chocolate cake with a gooey molten center.</p>
+                    <p class="price">Rs 199</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Burgers</h2>
+            <div class="menu-container">
+                <div id="17" class="menu-item" data-id="17" data-price="199">
+                    <h3>Cheese Burger</h3>
+                    <p>Juicy beef patty topped with melted cheese and fresh veggies.</p>
+                    <p class="price">Rs 199</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="18" class="menu-item" data-id="18" data-price="249">
+                    <h3>Chicken Burger</h3>
+                    <p>Grilled chicken patty with crispy lettuce and mayo.</p>
+                    <p class="price">Rs 249</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="19" class="menu-item" data-id="19" data-price="179">
+                    <h3>Veggie Burger</h3>
+                    <p>A delightful veggie patty with fresh toppings and sauces.</p>
+                    <p class="price">Rs 179</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="20" class="menu-item" data-id="20" data-price="299">
+                    <h3>Double Patty Burger</h3>
+                    <p>Two layers of beef patty with cheese and special sauce.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The same pattern follows for Cakes, Beverages, and Desi Foods -->
+        
+        <section class="menu-category">
+            <h2>Cakes</h2>
+            <div class="menu-container">
+                <div id="21" class="menu-item" data-id="21" data-price="399">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and moist chocolate cake with a creamy frosting.</p>
+                    <p class="price">Rs 399</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="22" class="menu-item" data-id="22" data-price="349">
+                    <h3>Vanilla Cake</h3>
+                    <p>Classic vanilla cake with buttercream frosting.</p>
+                    <p class="price">Rs 349</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="23" class="menu-item" data-id="23" data-price="449">
+                    <h3>Red Velvet Cake</h3>
+                    <p>Soft red velvet layers with cream cheese frosting.</p>
+                    <p class="price">Rs 449</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="24" class="menu-item" data-id="24" data-price="299">
+                    <h3>Fruit Cake</h3>
+                    <p>Fresh fruit chunks baked into a soft sponge cake.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Beverages</h2>
+            <div class="menu-container">
+                <div id="25" class="menu-item" data-id="25" data-price="129">
+                    <h3>Mango Smoothie</h3>
+                    <p>Refreshing mango smoothie made with fresh fruit and yogurt.</p>
+                    <p class="price">Rs 129</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="26" class="menu-item" data-id="26" data-price="99">
+                    <h3>Cold Coffee</h3>
+                    <p>Chilled coffee with cream and chocolate syrup.</p>
+                    <p class="price">Rs 99</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="27" class="menu-item" data-id="27" data-price="79">
+                    <h3>Lemon Iced Tea</h3>
+                    <p>Cool and refreshing iced tea with a hint of lemon.</p>
+                    <p class="price">Rs 79</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="28" class="menu-item" data-id="28" data-price="149">
+                    <h3>Hot Chocolate</h3>
+                    <p>Rich and creamy hot chocolate topped with whipped cream.</p>
+                    <p class="price">Rs 149</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-category">
+            <h2>Desi Foods</h2>
+            <div class="menu-container">
+                <div id="29" class="menu-item" data-id="29" data-price="499">
+                    <h3>Chicken Karahi</h3>
+                    <p>Succulent chicken cooked in a wok with spices and tomatoes.</p>
+                    <p class="price">Rs 499</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="30" class="menu-item" data-id="30" data-price="699">
+                    <h3>Mutton Karahi</h3>
+                    <p>Tender mutton pieces simmered in a flavorful curry.</p>
+                    <p class="price">Rs 699</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="31" class="menu-item" data-id="31" data-price="549">
+                    <h3>Butter Chicken</h3>
+                    <p>Grilled chicken in a creamy, buttery tomato sauce.</p>
+                    <p class="price">Rs 549</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="32" class="menu-item" data-id="32" data-price="349">
+                    <h3>Palak Paneer</h3>
+                    <p>Spinach and cottage cheese cooked in flavorful spices.</p>
+                    <p class="price">Rs 349</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="33" class="menu-item" data-id="33" data-price="299">
+                    <h3>Dal Makhani</h3>
+                    <p>Rich and creamy black lentils cooked with butter and cream.</p>
+                    <p class="price">Rs 299</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="34" class="menu-item" data-id="34" data-price="249">
+                    <h3>Chole Bhature</h3>
+                    <p>Spicy chickpeas served with deep-fried bread.</p>
+                    <p class="price">Rs 249</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="35" class="menu-item" data-id="35" data-price="349">
+                    <h3>Seekh Kebabs</h3>
+                    <p>Minced meat skewers seasoned with traditional spices.</p>
+                    <p class="price">Rs 349</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="36" class="menu-item" data-id="36" data-price="599">
+                    <h3>Haleem</h3>
+                    <p>Slow-cooked stew of lentils, meat, and wheat, flavored with spices.</p>
+                    <p class="price">Rs 599</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="37" class="menu-item" data-id="37" data-price="699">
+                    <h3>Nihari</h3>
+                    <p>Slow-cooked stew with tender meat and aromatic spices.</p>
+                    <p class="price">Rs 699</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="38" class="menu-item" data-id="38" data-price="249">
+                    <h3>Keema Paratha</h3>
+                    <p>Flatbread stuffed with spiced minced meat.</p>
+                    <p class="price">Rs 249</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="39" class="menu-item" data-id="39" data-price="399">
+                    <h3>Paneer Tikka</h3>
+                    <p>Grilled cubes of marinated cottage cheese with spices.</p>
+                    <p class="price">Rs 399</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div id="40" class="menu-item" data-id="40" data-price="549">
+                    <h3>Chicken Handi</h3>
+                    <p>Chicken cooked in a rich, creamy gravy served in a clay pot.</p>
+                    <p class="price">Rs 549</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+                
+        
+    </main>
+    
+     <!-- order popup  -->
+    <div id="order-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Confirm Your Order</h2>
+            <p id="product-name"></p>
+            <p id="product-price"></p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <button id="confirm-order">Confirm Order</button>
+            <button id="cancel-order">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="profileChecker.js"></script>
+      
+</body>
+</html>

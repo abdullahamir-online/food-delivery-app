@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="./home.html" class="logo"><i class="fa fa-utensils"></i> Foodies</a>
+        <nav class="navbar">
+            <a href="./home.html">Home</a>
+            <a href="./dishes.html">Dishes</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./cart.html" class="active">Cart</a>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="./Images/Dishes/Chicken-Biryani.jpg" alt="Chicken Biryani">
+                    <div class="item-details">
+                        <h3>Chicken Biryani</h3>
+                        <p>Quantity: <input type="number" value="1" min="1"></p>
+                        <p>Price: $12.99</p>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="./Images/Dishes/panner-tikka.jpg" alt="Paneer Tikka">
+                    <div class="item-details">
+                        <h3>Paneer Tikka</h3>
+                        <p>Quantity: <input type="number" value="2" min="1"></p>
+                        <p>Price: $9.99</p>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <p>Subtotal: $32.97</p>
+                <p>Tax (10%): $3.30</p>
+                <p>Total: $36.27</p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Foodies. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
