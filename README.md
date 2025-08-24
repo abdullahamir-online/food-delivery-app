@@ -50,6 +50,7 @@ Follow these steps to set up and run the project locally:
 git clone https://github.com/abdullahamir-online/food-delivery-app.git
 cd food-delivery-app
 
+```
 
 2️⃣ Setup Database
 
@@ -60,14 +61,20 @@ Update DB credentials in the backend configuration file (config.js or .env).
 
 3️⃣ Install Backend Dependencies
 
+```bash
+
 cd Back-end
 npm install
 
+```
+
 4️⃣ Run the Backend Server
+
+```bash
 
 node server.js
 
-
+```
 
 5️⃣ Open the Frontend
 
@@ -100,13 +107,5 @@ GitHub Profile
 
 
 
-
----
-
-This version ✅ looks **clean, professional, and GitHub-portfolio-ready**.  
-When you later add screenshots, your README will shine even more.  
-
-Do you also want me to add **badges** (like Node.js, MySQL, GitHub stars) at the top of the README to make it visually appealing right away?
-
-
+ 
 
