@@ -52,14 +52,14 @@ cd food-delivery-app
 
 ```
 
-2️⃣ Setup Database
+### 2️⃣ Setup Database
 
 Import foodie.sql into your MySQL server.
 
 Update DB credentials in the backend configuration file (config.js or .env).
 
 
-3️⃣ Install Backend Dependencies
+### 3️⃣ Install Backend Dependencies
 
 ```bash
 
@@ -76,14 +76,14 @@ node server.js
 
 ```
 
-5️⃣ Open the Frontend
+### 5️⃣ Open the Frontend
 
 Open Front-end/index.html in your browser.
 
 The frontend connects to backend APIs to fetch data and process orders.
 
 
-🎯 Learning Outcomes
+### 🎯 Learning Outcomes
 
 This project helped me practice and strengthen:
 
@@ -98,7 +98,7 @@ MVP design for real-world applications
 
 
 
-👨‍💻 Author
+### 👨‍💻 Author
 
 Abdullah Amir
 7th Semester – BE Software Engineering
