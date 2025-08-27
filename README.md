@@ -102,8 +102,7 @@ MVP design for real-world applications
 
 ### 👨‍💻 Author
 
-Abdullah Amir
-7th Semester – BE Software Engineering
+Abdullah Amir –   BE Software Engineering
 GitHub Profile
 
 
