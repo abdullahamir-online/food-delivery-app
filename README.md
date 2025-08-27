@@ -24,10 +24,10 @@ The frontend was handed over to me, and I developed and integrated the **Node.js
 ## 📂 Project Structure
 
 food-delivery-app/
-├── Front-end/        # HTML, CSS, JavaScript (frontend code)
-├── Back-end/         # Node.js + Express backend
-├── foodie.sql        # MySQL database schema & sample data
-└── README.md         # Project documentation
+├── 📂 Front-end/ # HTML, CSS, JavaScript (frontend code)
+├── 📂 Back-end/ # Node.js + Express backend
+├── 📄 foodie.sql # MySQL database schema & sample data
+└── 📄 README.md # Project documentation
 
 
 
